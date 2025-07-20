@@ -1,5 +1,5 @@
 const buttonStart = document.getElementById("start");
-const counter = document.getElementById("pomodoro-time");
+const counterDisplay = document.getElementById("pomodoro-time");
 
 let totalSeconds = 1500;
 let intervalId = null;
@@ -16,7 +16,7 @@ function updateDisplay() {
 
 buttonStart.addEventListener("click", function() {
     if (buttonStart.textContent === "Start") {
-        buttonStart.textContent === "Stop";
+        buttonStart.textContent = "Stop";
 
         intervalId = setInterval(() => {
             if (totalSeconds > 0) {
