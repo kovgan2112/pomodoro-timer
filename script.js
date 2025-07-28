@@ -15,8 +15,8 @@ function updateDisplay() {
 }
 
 buttonStart.addEventListener("click", function() {
-    if (buttonStart.textContent === "Start") {
-        buttonStart.textContent = "Stop";
+    if (buttonStart.textContent === "start") {
+        buttonStart.textContent = "stop";
 
         intervalId = setInterval(() => {
             if (totalSeconds > 0) {
@@ -25,12 +25,12 @@ buttonStart.addEventListener("click", function() {
             } else {
                 clearInterval(intervalId);
                 updateDisplay();
-                buttonStart.textContent = "Start";
+                buttonStart.textContent = "start";
             }
         }, 1000);
     } else {
         clearInterval(intervalId);
-        buttonStart.textContent = "Start";
+        buttonStart.textContent = "start";
     }
 });
 updateDisplay();
